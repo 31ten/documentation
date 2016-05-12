@@ -16,7 +16,11 @@ The goal of that repository is increasing the code reusability and code quality.
 
 ## CONTRIBUTION GUIDELINES
 
-- The most critical point when contributing on the documentation is making your contribution self-explanatory to another developer.
+The most critical point when contributing on the documentation is making your contribution self-explanatory to another developer.
+
+### WARNING
+
+This documentation is meant to be open-source and accessible by anybody, so it is important to not divulgate any login, passwords, API keys etc...
 
 #### COMMENTS
 Place comments before each class or function respecting PSR2 standards.
