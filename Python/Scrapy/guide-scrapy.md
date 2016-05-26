@@ -1,9 +1,9 @@
-## How to Setup and install Scrapy
+## How to Setup and Install Scrapy
 
 To first setup and install Scrapy we must make sure we are using Python2.7 or Python3.
-Since we are scraping data from Chinese sites, it's best we use Python3 since it handles utf-8 data out of the box.
+Since we are scraping data from Chinese websites, it's best if we use Python3 since it handles utf-8 data out of the box.
 
-I prefer using vitualenvs to structure my Python Projects but virtualenvs are out of the scope of this project.
+I prefer using vitualenv to structure my Python Projects, but virtualenv is out of the scope of this project.
 
 When installing packages with python we use pip.
 Make the project directory and inside run this command:
@@ -12,7 +12,7 @@ Make the project directory and inside run this command:
 
 
 Scrapy is now installed on your computer and is ready to be used.
-inside the project folder run this command to start your project.
+Inside the project folder run this command to start your project.
 
     scrapy startproject name_of_project
 
@@ -23,9 +23,9 @@ We can test the website and see what we can grab before we begin coding by runni
 
     scrapy shell full_name_of_url_you_want_to_scrape
 
-This opens an interactive shell in the terminal, here we can test waht we can grab using xpath selectors, this is a good first way to begin testing the website
+This opens an interactive shell in the terminal, here we can test what we can grab using xpath selectors, this is a good first way to begin testing the website
 
-To create the spider that will crawl the pages we want we run this command to create the files:
+To create the spider that will crawl the pages we want, we run this command to create the files:
 
     scrapy genspider name_of_spider name_of_url_to_scrape
 
@@ -35,7 +35,7 @@ Once we have finished writing our code we run the spider with:
 
     scrapy crawl spider_name
 
-If we want it to automatically import to json or CSV we can run this commande
+If we want it to automatically import to json or CSV we can run this command
 
     scrapy crawl spider_name -o name_of_json.json
 
