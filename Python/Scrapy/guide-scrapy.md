@@ -43,5 +43,7 @@ If we want it to automatically import to json or CSV we can run this command
 
      scrapy crawl spider_name -o name_of_csv.csv
 
+For more information about Scrapy check out their documentation at https://scrapy.readthedocs.io/en/latest/index.html
+
 
 
