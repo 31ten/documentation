@@ -31,6 +31,23 @@ Depending on the size of the project the naming convention we choose to use will
 + CSS reset = base style designed to reset the default margins, paddings, and other properties, this helps us build a consistent foundation across browsers to build the site on.
 + There are many CSS reset frameworks such as normalize.css but there are pro's and con's to using these frameworks. Some can be too aggressive and can create more problems then intended. It's best if we can reset it in the base class s we have more control over our own CSS.
 
+    p {
+        font-size: 12px;
+        line-height: 1.2;
+    }
+
+    h1 {
+        font-size: 24px;
+        color: #ccc;
+    }
+
+    a {
+       color: #2E4172;
+    }
+
+    ul{
+       list-style: none;
+    }
 
 ## 2. Layout
 + Layouts help divide the page into sections by creating the Major components of the site such as a header or footer. 
@@ -39,6 +56,26 @@ Depending on the size of the project the naming convention we choose to use will
 + We can use classes when there are common styling across components of the page
 + It is important to note that Layouts will be the ONLY primary category to use ID selectors, we can also use namespacing if project size is big enough.
 + When creating Layouts all we care about is how each item relates to each other, we do not need to worry about design of modules or the context the layouts sits within.
+
+    #header  #footer {
+        width: 960px;
+        margin: auto;
+    }
+
+    #blog {
+       border: solid #ccc;
+       border-width: 1px 0 0;
+       float: right;
+     }
+
+     #sidebar {
+        float: left;
+     }
+
+     #featured {
+     	margin: 0;
+     	padding: 0;
+     }
 
 
 ## 3. Module
@@ -52,11 +89,54 @@ Depending on the size of the project the naming convention we choose to use will
 + If an element selector must be used, it should be within one level of a class selector,(so it should be in a position to use child selectors)
 + Modules should not confuse elements with other elements
 + Allows us to better understand where contact changes are likely to occur.
-If we have the same module in different sections we should subclass it and style it accordingly, when we subclass it should look like this in our CSS: .moduleName-subclassName
++ If we have the same module in different sections we should subclass it and style it accordingly, when we subclass it should look like this in our CSS: .moduleName-subclassName
 + Subclassing the module will allow the module to be moved to other sections of the site more easily. This is especially useful if we want to change the look of a module that is found in other locations on the page or site.
 + Thus allowing us to avoid increasing the specificity of our elements
 + If changing the look of a module for useage elsewhere on the page or site, subclass-modules are used
 
+    .blog-subheadings {
+        font-size: 8px;
+        color: #d2d2d2;
+        font-weight: 700;
+        text-transform: uppercase;
+     }
+
+     .blog-tag {
+     	font-size: 10px;
+        color: #1abc9c;
+        word-wrap: break-word;
+     }
+
+     .button {
+     	display: inline:block
+     	margin-bottom: 0;
+     	font-size: 14px;
+     	font-weight: 400;
+     	line-height: 1.42;
+     	cursor: pointer;
+     	border: 1px solid;
+     	border-radius: 4px;
+     }
+
+     .blog-category {
+     	font-size: 10px;
+     	color: #00C723;
+     }
+
+     .fix-scroll {
+     	position: fixed;
+    }
+
+    .fix-scroll li{
+    	list-style: none;
+    	padding-bottom: 5px;
+    }
+
+    .tab{
+    	background-color: purple;
+    	color:white;
+    }
+    
 
 ## 4. State
 + The State is a way to describe how our modules or layouts will look when in a particular 'state'. 
@@ -75,6 +155,15 @@ If we have the same module in different sections we should subclass it and style
 + Sometimes a state is very specific to a particular module where styling is very unique, if used in a module then the state name should include the module name in it
 + State rules should also reside with the module rules and not the rest of the global state rules
 + If doing 'in-time' loading of CSS, generic states should be considered part of the base & global styles & loaded on initial page load, this allows the CSS for a particular module to load only when the module is needed
+
+    .is-tab-active {
+        background-color: white;
+        color: black;
+    }
+
+    .is-hidden {
+        visbilitiy: hidden;
+    }
 
 ####Changing States
 + When dealing with States various components are needed to be represented in various states such as a default state and an alternate state. There are three ways we can represent these changes.
@@ -107,6 +196,26 @@ If we have the same module in different sections we should subclass it and style
 + Themes are also good at helping us define our fonts
 + Defining specific rules to isolate font styles makes it easier to change font size across multiple components.
 + Font rules normally affect base, module and state styles and are not normally specificed at the layout level.
+
+    .theme-border {
+        border-color: purple;
+    }
+
+    .theme-background {
+        background: linear-gradient(left,rgba(255,0,0,0),rgba(255,0,0,1);
+    }
+
+    .theme-china {
+        line-height: 1.6;
+        font-size: 14px;
+        color: red;
+    }
+
+    .theme-usa {
+        line-height: 1.2;
+        font-size: 12px;
+        color: black;
+    }
 
 
 ## Tips 
