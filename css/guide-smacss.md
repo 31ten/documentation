@@ -32,21 +32,21 @@ Depending on the size of the project the naming convention we choose to use will
 + There are many CSS reset frameworks such as normalize.css but there are pro's and con's to using these frameworks. Some can be too aggressive and can create more problems then intended. It's best if we can reset it in the base class s we have more control over our own CSS.
 
 		p {
-		font-size: 12px;
-		line-height: 1.2;
+		  font-size: 12px;
+		  line-height: 1.2;
 		 }
 
 		h1 {
-		font-size: 24px;
-		color: #ccc;
+		  font-size: 24px;
+		  color: #ccc;
 		}
 
 		a {
-		color: #2E4172;
+		 color: #2E4172;
 		}
 
-		ul{
-		list-style: none;
+		ul {
+		  list-style: none;
 		}
 
 ## 2. Layout
@@ -58,21 +58,22 @@ Depending on the size of the project the naming convention we choose to use will
 + When creating Layouts all we care about is how each item relates to each other, we do not need to worry about design of modules or the context the layouts sits within.
 
 		#header  #footer {
-		width: 960px;
-		margin: auto;
+		  width: 960px;
+		  margin: auto;
 		}
 		#blog {
-		border: solid #ccc;
-		border-width: 1px 0 0;
-		float: right;
+		  border: solid #ccc;
+		  border-width: 1px 0 0;
+		  float: right;
 		}
+
 		#sidebar {
-		float: left;
+		  float: left;
 		}
 
 		#featured {
-		margin: 0;
-		padding: 0;
+		  margin: 0;
+		  padding: 0;
 		}
 
 
@@ -93,46 +94,46 @@ Depending on the size of the project the naming convention we choose to use will
 + If changing the look of a module for useage elsewhere on the page or site, subclass-modules are used
 
 		.blog-subheadings {
-		font-size: 8px;
-		color: #d2d2d2;
-		font-weight: 700;
-		text-transform: uppercase;
+		  font-size: 8px;
+		  color: #d2d2d2;
+		  font-weight: 700;
+		  text-transform: uppercase;
 		}
 
 		.blog-tag {
-		font-size: 10px;
-		color: #1abc9c;
-		word-wrap: break-word;
+		  font-size: 10px;
+		  color: #1abc9c;
+		  word-wrap: break-word;
 		}
 
-		.button {
-		display: inline:block
-		margin-bottom: 0;
-		font-size: 14px;
-		font-weight: 400;
-		line-height: 1.42;
-		cursor: pointer;
-		border: 1px solid;
-		border-radius: 4px;
+		.button-blog {
+		  display: inline:block
+		  margin-bottom: 0;
+		  font-size: 14px;
+		  font-weight: 400;
+		  line-height: 1.42;
+		  cursor: pointer;
+		  border: 1px solid;
+		  border-radius: 4px;
 		}
 
 		.blog-category {
-		font-size: 10px;
-		color: #00C723;
+		  font-size: 10px;
+		  color: #00C723;
 		}
 
 		.fix-scroll {
-		position: fixed;
+		  position: fixed;
 		}
 
 		.fix-scroll li{
-		list-style: none;
-		padding-bottom: 5px;
+		  list-style: none;
+		  padding-bottom: 5px;
 		}
 
 		.tab{
-		background-color: purple;
-		color:white;
+		  background-color: purple;
+		  color:white;
 		}
 
 
@@ -155,12 +156,12 @@ Depending on the size of the project the naming convention we choose to use will
 + If doing 'in-time' loading of CSS, generic states should be considered part of the base & global styles & loaded on initial page load, this allows the CSS for a particular module to load only when the module is needed
 
 		.is-tab-active {
-		background-color: white;
-		color: black;
+		  background-color: white;
+		  color: black;
 		}
 
 		.is-hidden {
-		visibility: hidden;
+		 visibility: hidden;
 		}
 
 ####Changing States
@@ -196,23 +197,23 @@ Depending on the size of the project the naming convention we choose to use will
 + Font rules normally affect base, module and state styles and are not normally specificed at the layout level.
 
 		.theme-border {
-		border-color: purple;
+		  border-color: purple;
 		}
 
 		.theme-background {
-		background: linear-gradient(left,rgba(255,0,0,0),rgba(255,0,0,1);
+		  background: linear-gradient(left,rgba(255,0,0,0),rgba(255,0,0,1);
 		}
 
 		.theme-china {
-		line-height: 1.6;
-		font-size: 14px;
-		color: red;
+		  line-height: 1.6;
+		  font-size: 14px;
+		  color: red;
 		}
 
 		.theme-usa {
-		line-height: 1.2;
-		font-size: 12px;
-		color: black;
+		  line-height: 1.2;
+		  font-size: 12px;
+		  color: black;
 		}
 
 
