@@ -2,13 +2,13 @@
 
 ## Organization
 
-Categorization helps us develop patterns that can define better practices. The more organized we are in CSS the more maintainable our code will be. This means we do not just want to blindly create CSS we want to have a plan and we want to structure our CSS in a way that allows us to know exactly what this is going to do in this project. 
+Categorization helps us develop patterns that can define better practices. The more organized we are in CSS the more maintainable our code will be. This means we do not just want to blindly create CSS we want to have a plan and we want to structure our CSS in a way that allows us to know exactly what this is going to do in this project.
 
 In order to keep ourselves organized SMACSS recommends 5 categories to place your CSS code in.
 
 
 These categorizations help us ask ourselves two questions:
-* How are we ging to code things? 
+* How are we ging to code things?
 * Why we are going to code it this way
 
 When coding CSS we want to write as little code as possible while still meeting the project requirements, to do this we need to find patterns we can repeat, if we can do this it will make it easier to maintain our CSS and it will provide us with greater consistency in UI.
@@ -31,49 +31,49 @@ Depending on the size of the project the naming convention we choose to use will
 + CSS reset = base style designed to reset the default margins, paddings, and other properties, this helps us build a consistent foundation across browsers to build the site on.
 + There are many CSS reset frameworks such as normalize.css but there are pro's and con's to using these frameworks. Some can be too aggressive and can create more problems then intended. It's best if we can reset it in the base class s we have more control over our own CSS.
 
-	p {
-	font-size: 12px;
-	line-height: 1.2;
-	 }
+		p {
+		font-size: 12px;
+		line-height: 1.2;
+		 }
 
-	h1 {
-	font-size: 24px;
-	color: #ccc;
-	}
+		h1 {
+		font-size: 24px;
+		color: #ccc;
+		}
 
-	a {
-	color: #2E4172;
-	}
+		a {
+		color: #2E4172;
+		}
 
-	ul{
-	list-style: none;
-	}
+		ul{
+		list-style: none;
+		}
 
 ## 2. Layout
-+ Layouts help divide the page into sections by creating the Major components of the site such as a header or footer. 
++ Layouts help divide the page into sections by creating the Major components of the site such as a header or footer.
 + Layouts hold one or more modules together, for example a login form, or navigation item sit inside the scope of the major component header or footer. Therefore we call these major components the layout and those that fit inside the major components, modules or minor components.
 + SMACSS recommends we use ID selectors, but it is also ok to use classes if the project calls for it.
 + We can use classes when there are common styling across components of the page
 + It is important to note that Layouts will be the ONLY primary category to use ID selectors, we can also use namespacing if project size is big enough.
 + When creating Layouts all we care about is how each item relates to each other, we do not need to worry about design of modules or the context the layouts sits within.
 
-	#header  #footer {
-	width: 960px;
-	margin: auto;
-	}
-	#blog {
-	border: solid #ccc;
-	border-width: 1px 0 0;
-	float: right;
-	}
-	#sidebar {
-	float: left;
-	}
+		#header  #footer {
+		width: 960px;
+		margin: auto;
+		}
+		#blog {
+		border: solid #ccc;
+		border-width: 1px 0 0;
+		float: right;
+		}
+		#sidebar {
+		float: left;
+		}
 
-	#featured {
-	margin: 0;
-	padding: 0;
-	}
+		#featured {
+		margin: 0;
+		padding: 0;
+		}
 
 
 ## 3. Module
@@ -81,7 +81,7 @@ Depending on the size of the project the naming convention we choose to use will
 + Modules will be the bulk of any project.
 + As mentioned in the Layout section, Modules sit inside layout componenets, and can sometime sit within other modules
 + However, Modules should be designed to exist as a standalone componenet so they can be easily moved to different parts of the layout without breaking it
-+ We need to avoid using id and element selectors, and try to use only class names. 
++ We need to avoid using id and element selectors, and try to use only class names.
 + Modules allow us to better understand where context changes are likely to occur throughout our project.
 + A module will likely contain a great deal of elements so we are likely to use descendent or child selectors.
 + If an element selector must be used, it should be within one level of a class selector,(so it should be in a position to use child selectors)
@@ -92,52 +92,52 @@ Depending on the size of the project the naming convention we choose to use will
 + Thus allowing us to avoid increasing the specificity of our elements
 + If changing the look of a module for useage elsewhere on the page or site, subclass-modules are used
 
-	.blog-subheadings {
-	font-size: 8px;
-	color: #d2d2d2;
-	font-weight: 700;
-	text-transform: uppercase;
-	}
+		.blog-subheadings {
+		font-size: 8px;
+		color: #d2d2d2;
+		font-weight: 700;
+		text-transform: uppercase;
+		}
 
-	.blog-tag {
-	font-size: 10px;
-	color: #1abc9c;
-	word-wrap: break-word;
-	}
+		.blog-tag {
+		font-size: 10px;
+		color: #1abc9c;
+		word-wrap: break-word;
+		}
 
-	.button {
-	display: inline:block
-	margin-bottom: 0;
-	font-size: 14px;
-	font-weight: 400;
-	line-height: 1.42;
-	cursor: pointer;
-	border: 1px solid;
-	border-radius: 4px;
-	}
+		.button {
+		display: inline:block
+		margin-bottom: 0;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 1.42;
+		cursor: pointer;
+		border: 1px solid;
+		border-radius: 4px;
+		}
 
-	.blog-category {
-	font-size: 10px;
-	color: #00C723;
-	}
+		.blog-category {
+		font-size: 10px;
+		color: #00C723;
+		}
 
-	.fix-scroll {
-	position: fixed;
-	}
+		.fix-scroll {
+		position: fixed;
+		}
 
-	.fix-scroll li{
-	list-style: none;
-	padding-bottom: 5px;
-	}
+		.fix-scroll li{
+		list-style: none;
+		padding-bottom: 5px;
+		}
 
-	.tab{
-	background-color: purple;
-	color:white;
-	}
-    
+		.tab{
+		background-color: purple;
+		color:white;
+		}
+
 
 ## 4. State
-+ The State is a way to describe how our modules or layouts will look when in a particular 'state'. 
++ The State is a way to describe how our modules or layouts will look when in a particular 'state'.
 + Such as, is it hidden or expanded, is it active or inactive? Each of these show the element being displayed in a specific way.
 + States can also describe how a module or layout should look on screens that are smaller or bigger via Media Queries
 + States can also describe how a module might look in different views like the home page or the inside page
@@ -146,7 +146,7 @@ Depending on the size of the project the naming convention we choose to use will
 + Think of an accoridian being in either a collapsed or expanded state.
 + States are generally applied to the same element as a layout rule or applied to the same element as a base module class.
 + State and submodules are similar in that they modify the existing look of an element but differ in two ways:
- - 1) State styles can apply to a layout &/or module styles, 
+ - 1) State styles can apply to a layout &/or module styles,
  - 2) Indicate a Javascript dependency
  - Sub-modules are only applied at render and never again whereas State styles are applied to elements to show a change in state while the page is still running.
 + !important can only be used in state styles but caution must be used and we tend to keep it as a last resort
@@ -154,14 +154,14 @@ Depending on the size of the project the naming convention we choose to use will
 + State rules should also reside with the module rules and not the rest of the global state rules
 + If doing 'in-time' loading of CSS, generic states should be considered part of the base & global styles & loaded on initial page load, this allows the CSS for a particular module to load only when the module is needed
 
-	.is-tab-active {
-	background-color: white;
-	color: black;
-	}
+		.is-tab-active {
+		background-color: white;
+		color: black;
+		}
 
-	.is-hidden {
-	visbilitiy: hidden;
-	}
+		.is-hidden {
+		visibility: hidden;
+		}
 
 ####Changing States
 + When dealing with States various components are needed to be represented in various states such as a default state and an alternate state. There are three ways we can represent these changes.
@@ -178,7 +178,7 @@ Depending on the size of the project the naming convention we choose to use will
  - 2) CSS = visual state
  - 3) JS = switches state   
 + Media queries should no longer be placed in it's own place, instead put media queries around the module states.
-+ Keeping module information together allows for isolated testing of the module 
++ Keeping module information together allows for isolated testing of the module
 
 
 ## 5. Theme
@@ -195,28 +195,28 @@ Depending on the size of the project the naming convention we choose to use will
 + Defining specific rules to isolate font styles makes it easier to change font size across multiple components.
 + Font rules normally affect base, module and state styles and are not normally specificed at the layout level.
 
-	.theme-border {
-	border-color: purple;
-	}
+		.theme-border {
+		border-color: purple;
+		}
 
-	.theme-background {
-	background: linear-gradient(left,rgba(255,0,0,0),rgba(255,0,0,1);
-	}
+		.theme-background {
+		background: linear-gradient(left,rgba(255,0,0,0),rgba(255,0,0,1);
+		}
 
-	.theme-china {
-	line-height: 1.6;
-	font-size: 14px;
-	color: red;
-	}
+		.theme-china {
+		line-height: 1.6;
+		font-size: 14px;
+		color: red;
+		}
 
-	.theme-usa {
-	line-height: 1.2;
-	font-size: 12px;
-	color: black;
-	}
+		.theme-usa {
+		line-height: 1.2;
+		font-size: 12px;
+		color: black;
+		}
 
 
-## Tips 
+## Tips
 + It is common to mix styles within each category, being aware of patterns helps us avoid complexitiy that comes from intertwining these rules.
 + We should not rely heavily on a defined html structure
 + Depth of html with selectors ahould not be too deep
@@ -224,7 +224,7 @@ Depending on the size of the project the naming convention we choose to use will
 
 #Depth of Applicability
 + Depth of Applicability is the number of generations that are affected by a given rule
- - ex CSS: body.article > #main > #content >#intro > p > b  = depth of applicability of 6 generations 
+ - ex CSS: body.article > #main > #content >#intro > p > b  = depth of applicability of 6 generations
  - Using the same example of above and shortening it to :  .article #intro b = still equals a depth of applicability of 6 generations.
 + Too much depth enforces greater dependecy on a particular html structure, which makes it not as easy to move around components of a page
 + Shallow depth give us the ability to more readily convert modules into templates for dynamic content
@@ -234,7 +234,7 @@ Depending on the size of the project the naming convention we choose to use will
 + Browsers handle documents like a stream, receive documents from the server and renders documents before it has completely downloaded.
 + Each node is evaluated and rendered to the viewport as it is received
 + Get's evaluated from right to left
-+ CSS has 4 rules they consider inefficient: 
++ CSS has 4 rules they consider inefficient:
  - 1)descendant selectors = #content h3
  - 2) child or adjacent selectors = #content > h3
  - 3) over qualified secletors, = div#content > h3
@@ -242,7 +242,7 @@ Depending on the size of the project the naming convention we choose to use will
 + These recommendations should not be taken too seriously because if we follow this verbatim then any evaluation more than a single element is considered inefficient.
 + To make a better guideline try using these four simple guidlines to limit the number of elements that need to be evaluated
  - 1) Use Child-selectors
- - 2) avoid tag selectors for common elements, 
+ - 2) avoid tag selectors for common elements,
  - 3) Use class names as the right most selector
  - 4) Increase semantics and decrease reliance on specific html
 + All in all we should consider selector performance but not waste too much time on it
@@ -250,7 +250,7 @@ Depending on the size of the project the naming convention we choose to use will
 
 ## Prototyping
 + When we are creating our CSS we need to first find patterns because they will help us establish familiarity and encourage re-use throughout our project.
-+ This will assist us while viewing components in part or in whole and allow the codification of the design language to be placed into building blocks. 
++ This will assist us while viewing components in part or in whole and allow the codification of the design language to be placed into building blocks.
 + Prototyping Goals Should include:
  - what will our default styles be for this project
  - how will we show our states for this project
@@ -258,17 +258,17 @@ Depending on the size of the project the naming convention we choose to use will
  - do we need to review localization to support multiple locales
  - will we need to create any test layouts
  - Lastly we need to isolate dependencies, meaning what CSS and JS are required to render this module correctly.
-            
+
 
 ## Preprocessors  
 + Sass and less are the two most commonly used preprocessors on the market
-+ These preprocessors allow us to use variables, which will keep site-wide information in one place allowing re-use 
- - such as setting a base color once and then reusing the variable whenever needed 
++ These preprocessors allow us to use variables, which will keep site-wide information in one place allowing re-use
+ - such as setting a base color once and then reusing the variable whenever needed
  - They also allow us to use Mixins, which allow us to group specific CSS styles together that can then be re-used throughout our CSS.
  - Can take parameters, which handle vendor prefixes and reptitive CSS rules
  - These preprocessors also allow us to use Nesting for a cleaner grouping of styles
- - They also come with Functions that give us the ability to calculate values inside our CSS 
- - Interpolation 
+ - They also come with Functions that give us the ability to calculate values inside our CSS
+ - Interpolation
  - File importing
  - Extending one module with properties of another
 + We want to Minimize deep nesting as much as possible
@@ -286,10 +286,10 @@ Depending on the size of the project the naming convention we choose to use will
 + When you're ready to launch, create a compressed version of your CSS for deployment
 
 ## Final Advice
-+ Some elements that are not used often despite thinking they may be singular and never changing should not be placed in the base 
++ Some elements that are not used often despite thinking they may be singular and never changing should not be placed in the base
 + Avoid complicated inheritance
 + !important does not override inheritance just specificity
-+ There is not a perfect solution to inheritance 
++ There is not a perfect solution to inheritance
 + The best way to format our CSS
  - Multiple lines
  - A Space after the colon
@@ -304,9 +304,4 @@ Depending on the size of the project the naming convention we choose to use will
  - 3) Background =  things like gradients,
  - 4) Text = font-family, font-size, text-transform
  - 5) Other = anything that does not fall into the above 4 gets placed in other and should be included at the end.
-+ No matter if we follow all of these rules verbatim the most important thing we need to take from our design is that we must be consistent in our naming conventions and design patterns. This consistency will allow us to code faster and more efficiently. 
-    
-
-
-
-
++ No matter if we follow all of these rules verbatim the most important thing we need to take from our design is that we must be consistent in our naming conventions and design patterns. This consistency will allow us to code faster and more efficiently.
