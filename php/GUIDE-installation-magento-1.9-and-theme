@@ -1,0 +1,44 @@
+# How to setup a Magento project and add logancee-multipurpose-responsive-magento theme
+
+## Magento 1.9
+### Installation
+
+  Requirement:
+  PHP 5.6.latest version < 7.0.0
+
+  Download Magento 1.9 from the official Magento website
+  https://www.magentocommerce.com/download?_ga=1.124859978.1775341130.1464323463
+
+#### Create a new database
+
+  - Before magento installation, make sure to create a new database using phpmyadmin
+  - Import theme sql database to your new database created in the previous step
+  - go to localhost/magento/install.php
+  Notice : Phpmyadmin login and password, in localhost is root/root
+  - install magento and change the admin_*** url to admin
+
+Go to localhost/magento/admin then follow the next steps:
+
+##### Refresh and Disable all the Magento cache
+
+Go to System -> Cache Management then click on:
+  - Flush Magento Cache
+  - Flush Cache Storage
+  - Select all "cache type" and change the action to "disable" then submit
+  - Click on all additional cache management
+
+#### Reindex magento data
+
+Go to System -> Index Management
+  - Select all "index" and change the action to "Reindex data" then submit
+  - Disable compilation mode. To get it done go to System -> Tools -> Compilation
+  - Disable Merge JavaScript and CSS Files . To get it done go to System -> Configuration -> Developer
+
+#### Import theme
+
+Log out from Magento admin panel
+Import the folders : app, js, lib, media, skin to the current location of Magento.
+
+Set correct file permissions for all the theme files which you uploaded to your server
+
+You can now login again. Your theme is installed.
